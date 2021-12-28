@@ -17,7 +17,7 @@ bash get_models.sh
 ```
 
 ## Train
-### YOLOv5
+### YOLOv5 (detection model)
 #### PreProcessing
 In order to satisfy the requirement of YOLOv5, we should first adjust the format of the ground truth. 
 ```
@@ -29,8 +29,17 @@ using YOLOv5 api
 ```
 python train.py --img 1280 --batch 6 --epochs 100 --data ./configs/TWStreet.yaml --weights yolov5l6.pt --device 1,2,3
 ```
-### PaddleOCR
-待補
+### PaddleOCR (recognition model)
+#### PreProcessing
+In order to satisfy the requirement of PaddleOCR, we should first adjust the format of the ground truth. 
+```
+python3 prepare_rec_train_format.py <json_root> <img_root> <train_folder>
+```
+Then we should modify the file paths in 'PaddleOCR/configs/rec/ch_ppocr_v2.0/rec_chinese_common_train_v2.0.yml' to our own file paths, including the 'data_iter' and 'label_file_list' of the Train dataset and Eval dataset. 
+#### Train
+```
+python3 -m paddle.distributed.launch --gpus '0' PaddleOCR/tools/train.py -c PaddleOCR/configs/rec/ch_ppocr_v2.0/rec_chinese_common_train_v2.0.yml
+```
 
 ## Inference
 You can use bash inference.sh to get the prediction of your images. 
