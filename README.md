@@ -13,6 +13,12 @@ pip install -r requirements.txt
 ```
 - inference_requirements.txt
 This file contains the minimum requirements which allow you to execute our command in the environments of python3.6.9. 
+```{bash}
+pip install -r inference_requirements.txt
+```
+
+### Reminder
+If you want to train your model and just use inference_requirements.txt to install the required package, that might be insufficient. You should further go to the home page of [YOLOv5](https://github.com/ultralytics/yolov5) and [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) to see their detailed procedure. 
 
 ## Download Models
 ```{wget}
