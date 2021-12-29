@@ -6,7 +6,17 @@ threshold = float(sys.argv[1])
 input_data_path = sys.argv[2]
 output_data_path = sys.argv[3]
 
-data = pd.read_csv(input_data_path)
+data = pd.read_csv(input_data_path, names=[
+    'imgName', 
+    'x0', 'y0', 
+    'x1', 'y1', 
+    'x2', 'y2', 
+    'x3', 'y3',
+    'dec_confidence', 
+    'class', 
+    'Label_data', 
+    'rec_confidence']
+)
 def filter_unknown(label):
     label = str(label).replace("###", '')
     return label

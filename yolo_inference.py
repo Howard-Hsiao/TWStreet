@@ -10,7 +10,13 @@ import pandas as pd
 
 img_folder = sys.argv[1]
 detection_model_path = sys.argv[2]
-temp_folder = "./temp"
+temp_folder = "./temp" # store the images produced by detection
+csv_foder   = "./output" # store the output prediction in the form of csv
+required_folder = [temp_folder, csv_foder]
+
+for required in required_folder:
+    if not os.path.isdir(temp_folder):
+        os.mkdir(temp_folder)
 
 class TWStreetIMG(Dataset):
     """

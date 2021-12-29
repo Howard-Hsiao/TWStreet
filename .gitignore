@@ -1,0 +1,6 @@
+*pyc
+logs*
+models*
+*__pycache__*
+temp/*
+output*
