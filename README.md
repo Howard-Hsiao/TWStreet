@@ -7,9 +7,12 @@
 ## Installation
 We used python3.6.9 to implement this solution. 
 You can use the following script to install the required packages. 
+- requirements.txt is "pip list" result of our virtualenv, if you want to check the specific package version we used, this file is what you want.
 ```{bash}
 pip install -r requirements.txt
 ```
+- inference_requirements.txt
+This file contains the minimum requirements which allow you to execute our command in the environments of python3.6.9. 
 
 ## Download Models
 ```{wget}

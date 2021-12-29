@@ -1,0 +1,12 @@
+torch
+torchvision
+paddlepaddle-gpu
+pandas
+opencv-python
+PyYAML
+tqdm
+matplotlib
+seaborn
+imgaug
+pyclipper
+lmdb

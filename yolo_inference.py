@@ -15,8 +15,8 @@ csv_foder   = "./output" # store the output prediction in the form of csv
 required_folder = [temp_folder, csv_foder]
 
 for required in required_folder:
-    if not os.path.isdir(temp_folder):
-        os.mkdir(temp_folder)
+    if not os.path.isdir(required):
+        os.mkdir(required)
 
 class TWStreetIMG(Dataset):
     """
