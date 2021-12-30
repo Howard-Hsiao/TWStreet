@@ -35,6 +35,18 @@ python3 prepare_YOLOv5_format.py <train_folder>
 
 #### Train
 using YOLOv5 api
+<br>
+`--image` specify the input image size
+<br>
+`--batch` specify the input batch size
+<br>
+`--epoch` specify the training epoch
+<br>
+`--data` specify the config path
+<br>
+`--weights` specify the path of weight file
+<br>
+`--device` specify the GPU id using in training
 ```
 python train.py --img 1280 --batch 6 --epochs 100 --data ./configs/TWStreet.yaml --weights yolov5l6.pt --device 1,2,3
 ```
