@@ -57,7 +57,7 @@ Before you start, please make sure:
     - **"./temp/"** folder is used to store the images produced by YOLOv5. Once you get the final prediction result, you can remove it. 
     - **"./output"** folder is used to store the inference result of YOLOv5 and PaddleOCR, and the final prediction result of the entire package.
 
-## **Reminder**
+### **Reminder**
 Owing to the limitation of the torch.hub.load() function, if you want to run the above inference script, you should ensure that your device has at least 1 gpu and there is enough memery left on the gpu of index 0. 
 
 #### Argument
